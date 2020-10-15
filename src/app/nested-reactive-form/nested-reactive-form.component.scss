@@ -1,0 +1,16 @@
+.nested-form {
+  h2 {
+    text-align: center;
+    margin-top: 7vh;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 5vh auto;
+  }
+  .input-row {
+    display: flex;
+    justify-content: space-between;
+  }
+}

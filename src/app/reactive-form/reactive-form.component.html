@@ -1,0 +1,25 @@
+<div class="basic-form">
+  <h2>Basic Form</h2>
+  <form [formGroup]="myForm">
+    Value: {{ myForm.value | json }}
+    <hr />
+    <mat-form-field>
+      <input matInput placeholder="email" formControlName="email" />
+    </mat-form-field>
+    <mat-form-field>
+      <textarea
+        matInput
+        placeholder="Your message..."
+        formControlName="message"
+      ></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Choose a Career</mat-label>
+      <mat-select formControlName="career" aria-placeholder="career">
+        <mat-option value="clown">Clown</mat-option>
+        <mat-option value="coder">Coder</mat-option>
+        <mat-option value="cody">Cody</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+</div>

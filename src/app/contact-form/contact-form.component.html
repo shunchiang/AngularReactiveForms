@@ -1,0 +1,38 @@
+<form
+  style="padding: 2rem"
+  #userForm="ngForm"
+  (ngSubmit)="onSubmit(userForm.value)"
+>
+  <div class="form-group">
+    <label for="firstName">First Name</label>
+    <input
+      name="firstName"
+      minlength="2"
+      maxlength="20"
+      ngModel="firstName"
+      #firstName="ngModel"
+      (change)="log(firstName)"
+      id="firstName"
+      type="text"
+      class="form-control"
+      required
+    />
+    <div
+      class="alert alert-danger"
+      *ngIf="firstName.touched && !firstName.valid"
+    >
+      <div *ngIf="firstName.errors.required">First Name is Required</div>
+      <div *ngIf="firstName.errors.minlength">
+        First name should be a minimum of 2 characters
+      </div>
+      <div *ngIf="firstName.errors.maxlength">
+        First name should not exceed 20 characters
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="comment">Comment</label>
+    <textarea class="form-control" id="comment" cols="30" rows="10"></textarea>
+  </div>
+  <button class="btn btn-primary">Submit</button>
+</form>
