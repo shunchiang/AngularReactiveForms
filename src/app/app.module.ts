@@ -14,6 +14,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { NestedReactiveFormComponent } from './nested-reactive-form/nested-reactive-form.component';
+import { ArrayFormComponent } from './array-form/array-form.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { NestedReactiveFormComponent } from './nested-reactive-form/nested-react
     ContactFormComponent,
     ReactiveFormComponent,
     NestedReactiveFormComponent,
+    ArrayFormComponent,
   ],
   imports: [
     BrowserModule,
